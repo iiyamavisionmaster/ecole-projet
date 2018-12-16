@@ -1,0 +1,49 @@
+test:
+    path: /test
+    defaults: { _controller: marmitonBundle:module:test }
+admin:
+    path: /admin
+    defaults: { _controller: marmitonBundle:module:admin }
+# login:
+#     path: /login
+#     defaults: { _controller: FOSUserBundle:Security:login } 
+change-password:
+    path: /change-password
+    defaults: { _controller: FOSUserBundle:ChangePassword:changePassword }
+
+postItem:
+    path: /postItem
+    defaults: { _controller: marmitonBundle:module:postItem }
+
+
+postItemAjax:
+    path: /postItemAjax
+    defaults: { _controller: marmitonBundle:Ajax:postItemAjax }
+
+postCommentAjax:
+    path: /postCommentAjax
+    defaults: { _controller: marmitonBundle:Ajax:postCommentAjax }
+
+getItem:
+    path: /getItem
+    defaults: { _controller: marmitonBundle:module:getItem }
+
+getUserInfo:
+    path : /getUserInfo
+    defaults: {_controller: marmitonBundle:module:getUserInfo}
+
+getRating:
+    path : /getRating
+    defaults: {_controller: marmitonBundle:module:getRating}
+
+postRatingAjax:
+    path : /postRatingAjax
+    defaults: {_controller: marmitonBundle:Ajax:postRatingAjax}
+
+getArticleAjax:
+    path : /getArticleAjax
+    defaults: {_controller: marmitonBundle:Ajax:getArticleAjax}
+
+itemListAjax:
+    path : /itemListAjax
+    defaults: {_controller: marmitonBundle:Ajax:itemListAjax}

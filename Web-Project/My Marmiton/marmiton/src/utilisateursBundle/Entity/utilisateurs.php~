@@ -1,0 +1,51 @@
+<?php 
+namespace utilisateursBundle\Entity;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="utilisateurs")
+ */
+class utilisateurs extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */ 
+    protected $facebookId;
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+     /**
+     * Set facebookId
+     *
+     * @param int $facebookId
+     *
+     * @return utilisateurs
+     */
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
+
+        return $this;
+    }
+
+    /**
+     * Get facebookId
+     *
+     * @return int
+     */
+    public function getFacebookId()
+    {
+        return $this->facebookId;
+    }
+}

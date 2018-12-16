@@ -1,0 +1,36 @@
+
+{% block body %}
+<section id="ItemList" class="offre">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 text-center">
+{{ absolute_url(path('admin')) }}
+        <hr class="small">
+        <div class="row">
+          {% for item in articles %} 
+          <div class="col-md-3">
+            <div class="offre-item">
+              <div id="wrapper">
+
+
+
+
+               <img src="{{ asset('public/img/uploads/'~item.imageId.path) }}" class="hover" >
+
+               <p class="titleDish">{{item.title}}</p>
+
+               <p class="text">
+                <a  href="{{ absolute_url(path('getItem')) }}?id={{item.Id }}" class="btn btn-dark">{{ 'itemThumbnail.module.seemore'|trans }}</a></p>
+                <input type="text" value="{{item.categoryId.tagName }}" data-role="tagsinput" name="category"></input>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

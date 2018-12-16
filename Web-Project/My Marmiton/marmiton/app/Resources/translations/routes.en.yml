@@ -1,0 +1,62 @@
+# Desc: /admin
+admin: /{_locale}/admin 
+
+# Desc: /{_locale}/admin 
+itemListAjax: /{_locale}/itemListAjax  
+
+# Desc: /{_locale}/getItem 
+getItem: /{_locale}/getItem  
+
+# Desc: /change-password
+change-password: /{_locale}/change-password   
+
+# Desc: /profile/change-password
+fos_user_change_password: /{_locale}/profile/change-password   
+
+# Desc: /profile/edit
+fos_user_profile_edit: /{_locale}/profile/edit   
+
+# Desc: /profile/
+fos_user_profile_show: /{_locale}/profile/   
+
+# Desc: /register/check-email
+fos_user_registration_check_email: /{_locale}/register/check-email   
+
+# Desc: /register/confirm/{token}
+fos_user_registration_confirm: '/{_locale}/register/confirm/{token}'   
+
+# Desc: /register/confirmed
+fos_user_registration_confirmed: /{_locale}/register/confirmed   
+
+# Desc: /register/
+fos_user_registration_register: /{_locale}/register/   
+
+# Desc: /resetting/check-email
+fos_user_resetting_check_email: /{_locale}/resetting/check-email   
+
+# Desc: /resetting/request
+fos_user_resetting_request: /{_locale}/resetting/request   
+
+# Desc: /resetting/reset/{token}
+fos_user_resetting_reset: '/{_locale}/resetting/reset/{token}'   
+
+# Desc: /resetting/send-email
+fos_user_resetting_send_email: /{_locale}/resetting/send-email   
+
+# Desc: /{_locale}/login_check
+fos_user_security_check: '/{_locale}/login_check'   
+
+# Desc: /{_locale}/login
+fos_user_security_login: '/{_locale}/login'   
+
+# Desc: /{_locale}/logout
+fos_user_security_logout: '/{_locale}/logout'   
+
+# Desc: /
+homepage: /   
+
+# Desc: /
+homepage_homepage: /{_locale}   
+
+# Desc: /test
+test: /test   

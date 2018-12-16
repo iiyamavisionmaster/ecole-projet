@@ -1,0 +1,76 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+   <div class ="well">
+
+       {% if error %}
+
+       <div class="alert alert-warning alert-dismissable">
+           <a href="" class="close " data-dismiss="alert" aria-label="close">×</a>
+           <strong>
+            {{ error.messageKey|trans(error.messageData, 'security') }}
+        </strong>
+    </div>
+    {% endif %}
+    <div>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+        <a href="{{ path('fos_user_security_logout') }}">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+        </a>
+        <div class="form-group" style="text-align: center">
+          <img src="{{ asset('public/img/avatar.png') }}" alt="..." class="img-circle">
+      </div>
+
+      {% else %}
+            <!--     <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+        -->{% endif %}
+    </div>
+
+    {% if app.request.hasPreviousSession %}
+    {% for type, messages in app.session.flashbag.all() %}
+    {% for message in messages %}
+    <div class="flash-{{ type }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+
+
+
+
+
+
+
+
+
+    {% if csrf_token %}
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+    
+
+
+    <div class="form-group">
+        <br>
+        <label for="username">{{ 'security.login.username'|trans }}</label>
+        <input type="text" class="form-control input-lg " id="username" name="_username" value="{{ last_username }}" required="required" />
+    </div>
+    <div class="form-group">
+        <label for="password">{{ 'security.login.password'|trans }}</label>
+        <input type="password" class="form-control input-lg " id="password" name="_password" required="required" />
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+        <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+    </div>
+
+    <input type="submit" class="btn  btn-lg btn-warning btn-block  " id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <a href="{{ path('facebook_connect') }}">Se connecter avec FaceBook</a>
+    <a href="{{ absolute_url(path('fos_user_registration_register'))}}">s'enregister</a>
+</div>
+</form>
+<div>
+    
+</div>

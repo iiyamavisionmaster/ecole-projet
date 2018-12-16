@@ -1,0 +1,76 @@
+admin:
+    layout:
+        envoyer: Envoyer
+
+adminLayout:
+    Layout:
+        message: Message
+
+getItem:
+    module:
+        classic: Classique
+        comments: Commentaire
+        cuisine: Cuisine
+        logToCommentAndRate: 'Connectez vous pour commenter et liker'
+        seeNextStep: 'Voir la prochaine étape'
+        stage: Etape
+
+getRating:
+    module:
+        rating: Notation
+
+getUserInfo:
+    module:
+        postedBy: 'Posté par'
+
+headerCarousel:
+    site:
+        selectCategoryIngredient: 'Selectionnez une category / un ingredient'
+
+index:
+    navigation:
+        connection: 'Connectez Vous'
+
+    navigationAdmin:
+        changePass: 'Changer votre mot de passe'
+        contact: 'Contactez Nous'
+        dahboard: DashBoard
+        info: 'Information utilisateur'
+        logout: Deconnexion
+        return: 'Retour à lacceuil'
+    
+itemList:
+    module:
+        newlabel: Nouveauté
+        seemore: 'Voir plus'
+
+itemThumbnail:
+    module:
+        seemore: 'Voir plus'
+
+postItem:
+    module:
+        add: Ajoutez
+        addStage: 'Ajoutez une étape'
+        addSubStage: 'Ajoutez une sous étape'
+        addTextStage: 'Ajoutez du texte'
+        delete: Effacez
+        post: Postez
+        title: 'Crée une recette'
+
+site:
+    footer:
+        about: 'A propos'
+        abouttext: 'Nous somme le 1er site de cuisine'
+
+    header:
+        search: Recherchez
+
+    navigation:
+        post: Postez
+        register: senregistrer
+
+user:
+    layout:
+        title: 'Connectez vous'
+        welcome: Bienvenue

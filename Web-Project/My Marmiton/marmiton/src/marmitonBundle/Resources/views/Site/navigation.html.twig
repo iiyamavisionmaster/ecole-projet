@@ -1,0 +1,40 @@
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="#"><img src="{{ asset('public/img/logo.jpg') }}" width="60%"></a>
+                </li>
+                <li>
+                    <a href="{{ app.request.getBaseURL()}}">
+                        <img src="{{ asset('public/img/france.jpg') }}" width="35" height="35">
+                    </a>
+                    <a href="{{ app.request.getBaseURL()}}/en">
+                        <img src="{{ asset('public/img/england.jpg') }}" width="35" height="35">
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" >Contact</a>
+                </li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li>
+                    <a href="{{ absolute_url(path('fos_user_security_logout')) }}" >{{ 'index.navigation.logout'|trans }}</a>
+                </li>
+                <li>
+                    <a id="goadmin" href="{{ absolute_url(path('admin')) }}" >{{ 'site.navigation.post'|trans }}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a id="goadmin" href="{{ absolute_url(path('admin')) }}"" >{{ 'index.navigation.connection'|trans }}</a>
+                </li>
+            
+                <li>
+                    <a id="goadmin" href="{{ absolute_url(path('admin')) }}"" >{{ 'site.navigation.post'|trans }}</a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="{{ absolute_url(path('fos_user_registration_register'))}}">{{ 'site.navigation.register'|trans }}</a>
+                </li>
+            
+            </ul>
+        </nav>

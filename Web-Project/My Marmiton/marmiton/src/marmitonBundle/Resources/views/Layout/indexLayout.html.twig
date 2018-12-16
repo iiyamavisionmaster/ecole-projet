@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+    {{ render(controller('marmitonBundle:Site:header')) }}
+</head>
+<body>
+    {{ render(controller('marmitonBundle:Site:navigation')) }}
+    {{ render(controller('marmitonBundle:Site:headerCarousel')) }}
+    <div class="col-lg-10 col-lg-offset-1 text-center">
+        <h2>{{ 'itemList.module.newlabel'|trans }}</h2>
+    </div>
+    {% block body %}
+    {{ render(controller('marmitonBundle:module:itemList')) }}
+    {% endblock %}
+    <div class="col-lg-10 col-lg-offset-1 text-center">
+    <form id="getNextDish" method="post" action="{{ absolute_url(path('itemListAjax')) }}" enctype="text/plain">
+          <a id="itemListAjax" href="#" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">{{ 'itemList.module.seemore'|trans }}</a></form>
+      </div>
+      <div id="contact"></div>
+      <div id="footer">{{ render(controller('marmitonBundle:Site:footer')) }}</div>
+
+
+      <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <!-- Bootstrap JSc -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Custom JS -->
+      <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=5xhi9edadnjq4hweqqhcnjg7818o28yg8g8zdv785mobk0yl"></script>
+
+      <script src="{{ asset('public/js/my_js.js') }}"></script> 
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  </body>
+  </html>

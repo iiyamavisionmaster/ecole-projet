@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+{{ render(controller('marmitonBundle:Site:header')) }}
+    </head>
+    <body>
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="#"><img src="{{ asset('public/img/bnpCE.jpg') }}" width="60%"></a>
+                </li>
+                <li>
+                    <form>
+                        <div class="form-group form-group-nav">
+                            <label for="recherche" style="text-align: center;" >Recherche</label>
+                            <input title="Rentrez le nom de l'offre recherché." class="form-control" type="text" name="recherche" id="recherche">
+                            <button type="submit" class="btn btn-default">Go</button>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <a href="#top" >Acceuil</a>
+                </li>
+                <li>
+                    <a href="#testimonial" >A propos</a>
+                </li>
+                <li>
+                    <a href="#partner" >Partenaires</a>
+                </li>
+                <li>
+                    <a href="#offre" >Nos offres brulente</a>
+                </li>
+                <li>
+                    <a href="#contact" >Contact</a>
+                </li>
+                <li>
+                    <a id="goadmin" href="./admin.html" >Se connecter</a>
+                </li>
+            </ul>
+        </nav>
+        <header id="top" class="header">
+            <div class="text-vertical-center box caroussel-no-pad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="carousel slide" id="carousel2" data-ride="carousel" data-interval="3000">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel2" data-slide-to="1"></li>
+                                    <li data-target="#carousel2" data-slide-to="2" ></li>
+                                    <li data-target="#carousel2" data-slide-to="3" ></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="profile-circle"><img class="circle-header" src="{{ asset('public/img/starwars.jpg') }}" width="100%"></div>
+                                        <p>Le 14 décembre, la BNP bénéficie d'une projection avant-première du nouveau Star Wars.
+                                            Les places sont disponibles à l'achat sur la billetterie du CE.
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="profile-circle" ><img class="circle-header" src="
+{{ asset('public/img/ouzbekistan.jpg') }}" width="100%"></div>
+                                        <p>Un voyage collectif est organisé : en Ouzbékistan. Des places sont encore disponibles.</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="profile-circle" ><img class="circle-header" src="{{ asset('public/img/colo.jpg') }}" width="100%"></div>
+                                        <p>Une colonie de vacances en Midi-Pyrénées a été réservée par le CE pour les enfants des salariés BNP Paribas et ses filiales.</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="profile-circle" ><img class="circle-header" src="{{ asset('public/img/garde.jpg') }}" width="100%"></div>
+                                        <p>Nouvelles conditions de remboursement des frais de garde pour vos enfants.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+        <!-- partner -->
+        <section id="partner" class="partner bg-primary">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2>Partenaires</h2>
+                        <hr class="small">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{{ asset('public/img/kadeo.jpg') }}" width="80%" height="100px" class="img-partner">
+                                    <h4>
+                                        <strong>Kadéo</strong>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <button type="button" href="#" class="btn btn-light" data-toggle="modal" data-target="#modal">En Voir Plus</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{{ asset('public/img/fnac.jpg') }}" width="50%" height="100px" class="img-partner">
+                                    <h4>
+                                        <strong>Fnac</strong>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <button type="button" href="#" class="btn btn-light" data-toggle="modal" data-target="#modal">En Voir Plus</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <img src="{{ asset('public/img/gaumont.jpg') }}" width="60%" height="100px" class="img-partner">
+                                    <h4>
+                                        <strong>Gaumont</strong>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <button type="button" href="#" class="btn btn-light" data-toggle="modal" data-target="#modal">En Voir Plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="callout">
+            <div class="text-vertical-center">
+                <h1>BNP Paribas</h1>
+                <h1>La banque d'un monde qui change</h1>
+            </div>
+        </aside>
+        <section id="offre" class="offre">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h2>Nos offres</h2>
+                        <hr class="small">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="offre-item">
+                                    <div id="wrapper">
+                                        <img src="{{ asset('public/img/starwars.jpg') }}" class="hover" >
+                                        <p class="text"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">En Voir Plus</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="offre-item">
+                                    <div id="wrapper">
+                                        <img src="{{ asset('public/img/garde.jpg') }}" class="hover" >
+                                        <p class="text"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">En Voir Plus</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="offre-item">
+                                    <div id="wrapper">
+                                        <img src="{{ asset('public/img/ouzbekistan.jpg') }}" class="hover" >
+                                        <p class="text"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">En Voir Plus</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="offre-item">
+                                    <div id="wrapper">
+                                        <img src="{{ asset('public/img/gaumont.jpg') }}" class="hover" >
+                                        <p class="text"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">En Voir Plus</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modal-offre">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="clickme bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>Participez au CE .</h3>
+                        <a href="#" type="button" href="#" class="btn btn-lg btn-light" data-toggle="modal" data-target="#modal-ce">Cliquez Moi !</a>
+                        <a href="#" type="button" href="#" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#modal-ce">Regardez Moi !</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section id="contact" class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.289787677411!2d2.3354873160651017!3d48.87175197928889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e397c0372bf%3A0x14676cc123f085df!2s16+Boulevard+des+Italiens%2C+75009+Paris!5e0!3m2!1sfr!2sfr!4v1493096278383" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+            <br />
+            <small>
+            <a href="https://maps.google.com/maps?f=q16+Boulevard+des+Italiens,+75009+Paris/@48.871752,2.3354873,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66e397c0372bf:0x14676cc123f085df!8m2!3d48.871752!4d2.337676"></a>
+            </small>
+        </section>
+        <div id="footer">{{ render(controller('marmitonBundle:Site:footer')) }}</div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Nos Partenires</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-offre" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Nos Offres</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Connectez vous a votre compte pour accéder a tous vos avantages</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-ce" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Information</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Connectez vous a votre compte pour nous envoyer un message</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Bootstrap JSc -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script src="{{ asset('public/js/my_js.js') }}"></script> 
+    </body>
+</html>

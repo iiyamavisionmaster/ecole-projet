@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="BNP CE">
+        <meta name="author" content="BNP">
+        <title>BNP CE</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom css -->
+        <link href="css/my_css.css" rel="stylesheet">
+        <!-- Custom Fonts and Icon -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="col-md-12 ">
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="./index.html#top"><img src="img/bnpCE.jpg" width="60%"></a>
+                </li>
+                <li>
+                    <form>
+                        <div class="form-group form-group-nav">
+                            <label for="recherche" style="text-align: center;" >Recherche</label>
+                            <input title="Rentrez le nom de l'offre recherché." class="form-control" type="text" name="recherche" id="recherche">
+                            <button type="submit" class="btn btn-default .search">Go</button>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <a href="./index.html#top" >Acceuil</a>
+                </li>
+                <li>
+                    <a href="./index.html#about" >A propos</a>
+                </li>
+                <li>
+                    <a href="./index.html#services" >Partenaires</a>
+                </li>
+                <li>
+                    <a href="./index.html#section-admin" >Nos offres brulente</a>
+                </li>
+                <li>
+                    <a href="./index.html#contact" >Contact</a>
+                </li>
+                <li>
+                    <a id="goacc" href="./index.html" >Se déconnecter</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-md-2">
+            <nav >
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="./index.html#top"><img src="img/bnpCE.jpg" width="60%"></a>
+                    </li>
+                    <li>
+                        <form>
+                            <div class="form-group form-group-nav">
+                                <label for="recherche" style="text-align: center;" >Recherche</label>
+                                <input title="Rentrez le nom de l'offre recherché." class="form-control" type="text" name="recherche" id="recherche">
+                                <button type="submit" class="btn btn-default .search">Go</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <a id="i-p" href="" >Informations personnelles</a>
+                    </li>
+                    <li>
+                        <a id="no" href="">Notifications <span class="badge">5</span></a><br>
+                    </li>
+                    <li>
+                        <a id="a-d" href="" >Ayant Droit</a>
+                    </li>
+                    <li>
+                        <a id="i-b" href="" >information banquaire</a>
+                    </li>
+                    <li>
+                        <a id="contact" href="" >contact</a>
+                    </li>
+                    <li>
+                        <a href="./index.html" >Retour</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 ">
+            <section id="info-perso" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1 text-center">
+                            <h2>Information Personnel</h2>
+                            <hr class="small">
+                            <form class="form-admin well form-horizontal" >
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Prénom</label>  
+                                    <div class="col-md-4 ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input  name="first_name" placeholder="First Name" class="form-control"  type="text" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" >Nom</label> 
+                                    <div class="col-md-4 ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input name="last_name" placeholder="Last Name" class="form-control"  type="text" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Adresse</label>  
+                                    <div class="col-md-4  ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input name="addr" placeholder="Addresse" class="form-control"  type="text" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Tel</label>  
+                                    <div class="col-md-4  ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                            <input id="tel" name="phone" placeholder="XXXXXXXXXX" class="form-control" type="text" maxlength="10" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">E-Mail</label>  
+                                    <div class="col-md-4 ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <input id="email" name="email" placeholder="E-Mail Address" class="form-control"  type="email" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Droit</label>  
+                                    <div class="col-md-4 ">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input  name="right" placeholder="1600 point" class="form-control"  type="number" min="0" max="1600" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="edit-info" type="submit" class="btn btn-primary  ">Editer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="notif" class="section-admin  admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1 text-center">
+                            <h2>Notifications</h2>
+                            <hr class="small">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-admin-item  notif">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-dark">Voir Plus</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ad" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1 text-center ">
+                            <h2>Ayant Droit</h2>
+                            <hr class="small">
+                            <div class="row overflow-ad">
+                                <div class="col-md-12">
+                                    <div id="a-r" class="section-admin-item ">
+                                    </div>
+                                </div>
+                            </div>
+                            <a id="add" href="#" class="btn btn-dark">Ajouter</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="info-bank" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1 text-center ">
+                            <h2>information banquaire</h2>
+                            <hr class="small">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-admin-item">
+                                        <form class="form-admin well form-horizontal" >
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">code banque</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input  name="first_name" placeholder="code banque" class="form-control"  type="text" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">code guichet</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input  name="first_name" placeholder="code guichet" class="form-control"  type="text" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">numéro de compte</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input  name="first_name" placeholder="numéro de compte" class="form-control"  type="text" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">clé RIB</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input  name="first_name" placeholder="clé RIB" class="form-control"  type="text" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">IBAN</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input  name="first_name" placeholder="IBAN" class="form-control"  type="text" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary edit">Editer</button>
+                                        </form>
+                                        <div>
+                                            <div class="col-md-2 progress-inline">Acte naissance</div>
+                                            <button type="submit"  id="download1" class="btn btn-primary progress-inline col-md-2 ">Télécharger</button>
+                                            <div class="progress col-md-8">
+                                                <div class="progress-bar progress-bar-striped active " role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    0%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-2 progress-inline">Passeports et cartes </div>
+                                            <button type="submit" id="download2" class="btn btn-primary progress-inline col-md-2">Télécharger</button>
+                                            <div class="progress col-md-8">
+                                                <div class="progress-bar progress-bar-striped active " role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    0%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-2 progress-inline">Factures</div>
+                                            <button type="submit" id="download3" class="btn btn-primary progress-inline col-md-2">Télécharger</button>
+                                            <div class="progress col-md-8">
+                                                <div class="progress-bar progress-bar-striped active " role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                    0%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contacts" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1 text-center ">
+                            <h2>Contactez nous</h2>
+                            <hr class="small">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="a-r" class="section-admin-item ">
+                                        <form class="form-admin well form-horizontal" >
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Email</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                        <input id="email" name="email" placeholder="email" class="form-control"  type="text" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Message</label>  
+                                                <div class="col-md-4 ">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+                                                        <textarea name="msg" placeholder="Votre message" class="form-control"  type="textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a id="send" href="#" class="btn btn-dark">Send</a>
+                                        </form>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.624936038789!2d2.333647915150185!3d48.827217279284454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671bb5cc768a3%3A0xf94c1752c4b1b5da!2s11+Rue+d&#39;Al%C3%A9sia%2C+75014+Paris!5e0!3m2!1sfr!2sfr!4v1493640687882" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+                                        <br />
+                                        <small>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.624936038789!2d2.333647915150185!3d48.827217279284454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671bb5cc768a3%3A0xf94c1752c4b1b5da!2s11+Rue+d&#39;Al%C3%A9sia%2C+75014+Paris!5e0!3m2!1sfr!2sfr!4v1493640687882"></a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="footer" class="col-md-12"></div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Custom JS -->
+        <script src="js/my_js.js"></script>
+    </body>
+</html>

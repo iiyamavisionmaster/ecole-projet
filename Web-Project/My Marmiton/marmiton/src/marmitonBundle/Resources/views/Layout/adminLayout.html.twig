@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ render(controller('marmitonBundle:Site:header')) }}
+</head>
+
+<body>
+    <div class="col-md-12 ">
+
+        {{ render(controller('marmitonBundle:Site:navigationAdmin')) }}
+        <div class="col-md-10 ">
+            <section id="dashBoardShow" class="section-admin  admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 text-center">
+                            <h2>{{ 'index.navigationAdmin.dahboard'|trans }}</h2>
+                            <hr class="small">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-admin-item  notif">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-dark">{{ 'itemList.module.seemore'|trans }}</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="infoShow" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 text-center">
+                            <h2>{{ 'index.navigationAdmin.info'|trans }}</h2>
+                            <hr class="small"> 
+                            {% include"marmitonBundle:Module:profile.html.twig" %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="changePasswordShow" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 text-center ">
+                            <h2>{{ 'index.navigationAdmin.changePass'|trans }}</h2>
+                            <hr class="small">
+                            <div class="row overflow-ad">
+                                {{ render(path('change-password')) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="postItemShow" class="section-admin admin-active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-11 text-center ">
+                            <h2>{{ 'site.navigation.post'|trans }}</h2>
+                            <hr class="small">
+                            <div class="row overflow-ad">
+                              {{ render(controller('marmitonBundle:Module:categoryListAdminSelect')) }}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section id="contacts" class="section-admin admin-active">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11 text-center ">
+                        <h2>{{ 'index.navigationAdmin.contact'|trans }}</h2>
+                        <hr class="small">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="a-r" class="section-admin-item ">
+                                    <form class="form-admin well form-horizontal" >
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label">Email</label>  
+                                            <div class="col-md-4 ">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <input id="email" name="email" placeholder="email" class="form-control"  type="text" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                        <label class="col-md-4 control-label">{{'adminLayout.Layout.message' | trans}}</label>  
+                                            <div class="col-md-4 ">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+                                                    <textarea name="msg" placeholder="adminLayout.Layout.yourMessage" class="form-control"  type="textarea"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a id="send" href="#" class="btn btn-dark">{{ 'admin.layout.envoyer'|trans }}</a>
+                                    </form>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.624936038789!2d2.333647915150185!3d48.827217279284454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671bb5cc768a3%3A0xf94c1752c4b1b5da!2s11+Rue+d&#39;Al%C3%A9sia%2C+75014+Paris!5e0!3m2!1sfr!2sfr!4v1493640687882" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+                                    <br />
+                                    <small>
+                                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.624936038789!2d2.333647915150185!3d48.827217279284454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671bb5cc768a3%3A0xf94c1752c4b1b5da!2s11+Rue+d&#39;Al%C3%A9sia%2C+75014+Paris!5e0!3m2!1sfr!2sfr!4v1493640687882"></a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="footer" class="col-md-12"></div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ asset('public/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('public/js/my_js.js') }}"></script> 
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+</body>
+</html>

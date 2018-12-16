@@ -1,0 +1,85 @@
+{% extends"marmitonBundle:Layout:indexLayout.html.twig" %}
+
+
+{% block body %}
+
+<div class="col-md-12">
+
+	<div class="col-md-9">
+
+		<h1 class="  col-lg-offset-5">{{article.title}}</h1>
+		<img src="{{ asset('public/img/uploads/'~article.imageId.path) }}" class="" >
+	</div>
+	<div class="col-md-3">
+
+		<ul class="nav nav-tabs">
+			
+			<li class="active"><a href="#classic" data-toggle="tab">{{'getItem.module.classic' | trans}}</a></li>
+			<li><a href="#cuisine" data-toggle="tab">{{'getItem.module.cuisine' | trans}}</a></li>
+		</ul> 
+
+		<div class="tab-content ">
+			<div id="classic" class="tab-pane active">
+				<div class="text">
+					{% for stageTab in text %} 
+					<h4>{{ 'getItem.module.stage'|trans }} {{loop.index}} :</h4><ul>
+					{% for item in stageTab %}
+					<li>{{item}}</li> 
+					{% endfor %} 
+				</ul>
+				<br>
+				{% endfor %} 
+			</div>
+		</div>
+		<div id="cuisine" class="tab-pane">
+			<a  href=""  class="btn btn-primary firstStage">{{'getItem.module.seeNextStep' | trans}}</a>
+
+			{% for stageTab in text %} 
+			<div class="stageHided">
+				<h4>{{ 'getItem.module.stage'|trans }} {{loop.index}} :</h4>
+				{% for item in stageTab %}
+				{{item}} <br>
+				{% endfor %} 
+				<br>
+				<a  href=""  class="btn btn-primary nextStage">{{'getItem.module.seeNextStep' | trans}}</a>
+
+			</div>
+
+			{% endfor %} 
+
+		</div>
+	</div>
+</div>
+<div class="col-md-12">
+	
+<br><br><br>
+<a  href="{{ absolute_url(path('homepage_homepage')) }}"  class="btn btn-dark">{{ 'index.navigationAdmin.return'|trans }}</a></p>
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+{{ render(path('getRating', {'id': article.Id})) }}
+{% endif %}
+<h1>{{ 'getItem.module.comments'|trans }}</h1>        
+{% for comment in article.comments %} 
+<hr>         
+<h4>{{ render(path('getUserInfo', {'id': comment.userId})) }}</h4>
+<div>{{comment.text | raw}}</div>
+
+{% endfor %}
+<hr> 
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+<form id="my_form" method="post" action="{{ absolute_url(path('postCommentAjax')) }}" enctype="multipart/form-data">
+
+	<input type="text" name="id" value="{{article.Id}}" style="display: none;">
+	<textarea  id="text" name="text"></textarea>
+	<input data-postItem="{{ absolute_url(path('postItemAjax')) }}" id="postItemForm" class="btn  btn-lg btn-warning btn-block  " type="submit" value="Postez" />
+</form>
+
+{% else %}
+<div>{{ 'getItem.module.logToCommentAndRate'|trans }}please log in to comments and rate</div>
+{% endif %}
+</div>
+</div>
+</div>
+
+{% endblock %}

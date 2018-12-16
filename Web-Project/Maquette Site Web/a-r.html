@@ -1,0 +1,57 @@
+<form class="form-admin well form-horizontal" >
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Nom</label> 
+    <div class="col-md-4 ">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input name="last_name" placeholder="Last Name" class="form-control"  type="text" readonly>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-4 control-label">Prénom</label>  
+    <div class="col-md-4 ">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user"></i>
+        </span>
+        <input  name="first_name" placeholder="First Name" class="form-control"  type="text" readonly>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-4 control-label">Date</label>  
+    <div class="col-md-4 ">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user"></i>
+        </span>
+        <input  name="date"  class="form-control"  type="date" readonly>
+      </div>
+    </div>
+  </div>
+<div class="form-group"> 
+  <label class="col-md-4 control-label">liaison familiale</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="l-f" class="form-control " >
+      <option>Enfant</option>
+      <option>Conjoint</option>
+    </select>
+  </div>
+</div>
+</div>
+  <div class="form-group">
+    <label class="col-md-4 control-label">Droit</label>  
+    <div class="col-md-4 ">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user"></i>
+        </span>
+        <input  name="right" placeholder="1200 point" class="form-control"  type="number" min="0" max="1200" readonly>
+      </div>
+    </div>
+  </div>
+  <button  class="btn btn-primary edit">Editer</button><button  class="btn btn-primary supp">Supprimer</button>
+</form>

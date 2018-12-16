@@ -1,0 +1,30 @@
+        <header id="top" class="header"><br><br><br><br>
+            <div class="box caroussel-no-pad col-md-6 col-lg-offset-3">
+                <div class="container">
+                    <div class="row"><br>
+                        <div class="col-md-10">
+                          <form id="searchForm" method="post" action="{{ absolute_url(path('getArticleAjax', {"_locale": "en"})) }}" enctype="multipart/form-data">
+                             <div class="form-group col-md-7">
+                                <input id="search" type="text" class="form-control search" placeholder="{{ 'site.header.search'|trans }}">
+                            </div>
+                            <div class="form-group col-md-2 " style="margin-top: 0.6%;">
+                                <button type="submit" class="btn btn-default ">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                            <div class="form-group col-md-7">
+                            <label for="selectCategory">{{'headerCarousel.site.selectCategoryIngredient' | trans}}</label>
+                                <select id="selectCategory" class="form-control  " name="category">
+                                    {% for item in categories %} 
+                                    <option>{{item}}</option>
+                                    {% endfor %} 
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

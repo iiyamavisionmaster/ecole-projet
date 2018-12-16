@@ -1,0 +1,18 @@
+Snake
+Snake est un jeu avec de multiple Game Play possible. Voici les règles que nous avons choisi d’aborder :
+Le jeu doit permettre de diriger un serpent afin qu’il catch les différents objets droper sur le plateau de jeu. Pour cela il doit éviter les divers obstacles qui seront sur la route. 
+Chaque objet rapporte des points (et/ou des pouvoirs) le but du jeu est d’avoir le plus de point possible.
+Le « Catch » permet de récupéré des objets en passant la tête de la queue sur l’objet. Leur effet s’applique immédiatement. Il drop pour une durée limité sur le plateau.
+Type de Catch :
+Jaune : Permet de grandir d’une case la queue du serpent
+Bleu : Bonus permet d’accélérer le serpent pour une durée de 10 secondes.
+Gris : Malus limite la vitesse de déplacement pour une durée de 10 secondes. 
+Rouge : Malus réduit la taille du serpent d’une case
+Vert : rend le serpent insensible au obstacle, les bords permettent de revenir du côté opposés.
+Entrer en contact avec des obstacles (mur ou bords du plateau) sans avoir catcher un objet vert signifie la fin de la partie.
+Le jeu comprend plusieurs niveaux différant par leurs configurations et leurs complexités (nombre d’obstacle, et nombre de catch).
+Pour passer un niveau il faut atteindre le score objectif du niveau.
+Le serpent se déplace seul il est représenté par des carrés. 
+Au début de chaque niveau le serpent commence avec une tête et un élément du corps. 
+Pour déplacer le serpent il faut utiliser la touche « Q » pour aller vers la gauche (du serpent) et la touche « D » pour aller vers la droite. 
+Bonus : jouer contre une IA

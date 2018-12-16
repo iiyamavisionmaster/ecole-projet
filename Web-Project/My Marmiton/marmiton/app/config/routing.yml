@@ -1,0 +1,35 @@
+utilisateurs:
+    resource: "@utilisateursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+homepage_homepage:
+    path:     /
+    defaults: { _controller: marmitonBundle:Layout:index }
+
+homepage:
+    resource: "@marmitonBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+# app/config/routing.yml
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+    
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix:   /connect
+
+hwi_oauth_login:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix:   /login
+    
+facebook_login:
+    path: /connect/check-facebook
+
+facebook_connect:
+    path: /connect/facebook
+

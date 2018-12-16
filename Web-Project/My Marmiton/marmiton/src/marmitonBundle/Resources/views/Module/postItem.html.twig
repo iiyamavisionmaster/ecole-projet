@@ -1,0 +1,48 @@
+<div class="col-md-9">
+	<div class="section-admin-item">
+		<form id="my_form" method="post" action="{{ absolute_url(path('postItemAjax')) }}" enctype="multipart/form-data">
+			
+			<div class="form-group">
+				<br>
+				<label for="titleDish"><h3>{{'postItem.module.title' | trans}}</h3></label>
+				<input type="text" class="form-control input-lg " id="titleDish" name="title" value="" required="required" />
+			</div>
+			<textarea  id="textDish" name="text">
+			</textarea>
+			<input type="file" id="file" class="form-control input-lg " name="picture">
+			
+			<input type="text" value="{% for category in categories %}{{category}},{% endfor %}" data-role="tagsinput" name="category"></input>
+			<input data-postItem="{{ absolute_url(path('postItemAjax')) }}" id="postItemForm" class="btn  btn-lg btn-warning btn-block  " type="submit" value="{{'postItem.module.post' | trans}}" />
+		</form>
+	</div>
+</div>
+<div class="col-md-3 "><br><br><br><br><br>
+	<input type="text" class="form-control input-lg " id="stage" name="stage" placeholder="{{'postItem.module.addStage' | trans}}" required="required" />
+	<input  id="addStage" class="btn  btn-lg btn-info btn-block  " type="submit" value="{{'postItem.module.add' | trans}}" />
+
+	<input type="text" class="form-control input-lg " id="subStage" name="subStage" placeholder="{{'postItem.module.addSubStage' | trans}}" required="required" />
+	<select id="addIngredient" name="addIngredient" class="form-control  ">
+		{% for category in categories %}
+		<option value="{{category}}">{{category}}
+		</option>
+
+		{% endfor %}
+	</select>	
+	<input id="addNumber" name="addNumber" class="btn  btn-lg btn-info btn-block  " type="range" value="1" max="1000" min="1" step="1" onchange="range.value=value">
+
+	<output id="range">1</output>
+	<select id="addMeasurement" class="form-control  ">
+
+
+		<option value="g">g</option>
+		<option value="L">L</option> 
+		<option value="mL">mL</option> 
+		<option value="cac">cac</option>
+
+	</select>			
+	<input  id="addSubStage" class="btn  btn-lg btn-info btn-block  " type="submit" value="{{'postItem.module.add' | trans}}" />
+
+	<input type="text" class="form-control input-lg " id="textSubStage" name="textSubStage" placeholder="{{'postItem.module.addTextStage' | trans}}" required="required" />
+	<input  id="addText" class="btn  btn-lg btn-info btn-block  " type="submit" value="{{'postItem.module.add' | trans}}" />
+	<input  id="delete" class="btn  btn-lg btn-info btn-block  " type="submit" value="{{'postItem.module.delete' | trans}}" />
+</div>

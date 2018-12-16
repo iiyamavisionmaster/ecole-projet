@@ -1,0 +1,76 @@
+admin:
+    layout:
+        envoyer: Send
+
+adminLayout:
+    Layout:
+        message: 'message box'
+
+getItem:
+    module:
+        classic: Classic
+        comments: Comments
+        cuisine: Cooking
+        logToCommentAndRate: 'log to comment and rate'
+        seeNextStep: 'see next step'
+        stage: Stage
+
+getRating:
+    module:
+        rating: Rating
+
+getUserInfo:
+    module:
+        postedBy: 'Posted By'
+
+headerCarousel:
+    site:
+        selectCategoryIngredient: 'select category ingredient'
+
+index:
+    navigation:
+        connection: Connection
+
+    navigationAdmin:
+        changePass: 'change password'
+        contact: Contact
+        dahboard: Dahboard
+        info: 'Info user'
+        logout: Logout
+        return: 'Return to home page'
+
+itemList:
+    module:
+        newlabel: 'New Dishes'
+        seemore: 'See More'
+
+itemThumbnail:
+    module:
+        seemore: 'See More'
+
+postItem:
+    module:
+        add: Add
+        addStage: 'Add Stage'
+        addSubStage: 'Add Sub Stage'
+        addTextStage: 'Add Text Stage'
+        delete: Delete
+        post: 'Post your Dishes'
+        title: 'Post A New Dish'
+
+site:
+    footer:
+        about: About
+        abouttext: 'We are the first cooking site'
+
+    header:
+        search: Search
+
+    navigation:
+        post: 'Post your Dishes'
+        register: Register
+
+user:
+    layout:
+        title: Connexion
+        welcome: Welcome

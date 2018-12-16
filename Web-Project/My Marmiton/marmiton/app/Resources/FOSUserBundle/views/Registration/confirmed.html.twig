@@ -1,0 +1,14 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+<form action="{{ path("fos_user_registration_register") }}" method="post" class="fos_user_registration_register">
+     <div class ="well">
+    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    
+    <p><a href="{{ url('homepage_homepage') }}">{{ 'registration.back'|trans }}</a></p>
+    
+    </div>
+</form>
+{% endblock fos_user_content %}

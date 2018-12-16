@@ -1,0 +1,30 @@
+<div class="col-md-2">
+    <nav >
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href=""><img src="{{ asset('public/img/logo.jpg') }}" width="60%"></a>
+            </li><br><br><br>
+            <li>
+                <a id="dashBoard" href="">{{ 'index.navigationAdmin.dahboard'|trans }} <span class="badge">5</span></a>
+            </li>
+            <li>
+                <a id="info" href="" >{{ 'index.navigationAdmin.info'|trans }}</a>
+            </li>
+            <li>
+                <a id="changePassword" href="" >{{ 'index.navigationAdmin.changePass'|trans }}</a>
+            </li>
+            <li>
+                <a id="postItem" href="" >{{ 'site.navigation.post'|trans }}</a>
+            </li>
+            <li>
+                <a id="contact" href="" >{{ 'index.navigationAdmin.contact'|trans }}</a>
+            </li>
+            <li>
+                <a href="{{ url('homepage_homepage') }}" >{{ 'index.navigationAdmin.return'|trans }}</a>
+            </li>
+            <li>
+                <a href="{{ logout_path(key = null) }}" >{{ 'index.navigationAdmin.logout'|trans }}</a>
+            </li>
+        </ul>
+    </nav>
+</div>

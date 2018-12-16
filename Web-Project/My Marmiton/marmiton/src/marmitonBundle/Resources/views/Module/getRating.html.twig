@@ -1,0 +1,30 @@
+{% set posted = 'false' %}
+{% for id in rateIds %} 
+
+{% if id ==  app.user.id%}
+{% set posted = 'true' %}
+{% endif %}
+{% endfor %}
+
+<div class="stars">
+        <h1 class="">{{'getRating.module.rating' | trans}}</h1>
+{% if posted ==  'true'%}You have already voted for this Dish{% endif %}
+  <form id="rating" method="post" action="{{ absolute_url(path('postRatingAjax')) }}" enctype="multipart/form-data">
+
+
+    <input value="{{posted}}" type="text" name="posted" id="posted" style="display: none;">    
+
+    <input value="{{article.id}}" type="text" name="articleId" id="articleId" style="display: none;">
+    <input value="{{app.user.id}}" type="text" name="userId" id="userId" style="display: none;">
+    <input class="star star-5" id="star-5" type="radio" name="star" value="5" {% if rate <= 5 and rate > 4 %}checked{% endif %}{% if posted ==  'true'%}disabled{% endif %}/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star" value="4" {% if rate <= 4 and rate > 3 %}checked{% endif %}{% if posted ==  'true'%}disabled{% endif %}/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star" value="3" {% if rate <= 3 and rate > 2 %}checked{% endif %}{% if posted ==  'true'%}disabled{% endif %}/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star" value="2" {% if rate <= 2 and rate > 1 %}checked{% endif %}{% if posted ==  'true'%}disabled{% endif %}/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star" value="1" {% if rate <= 1 and rate >= 0 %}checked{% endif %}{% if posted ==  'true'%}disabled{% endif %}/>
+    <label class="star star-1" for="star-1"></label>
+</form>
+</div> 
